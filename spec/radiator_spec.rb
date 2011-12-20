@@ -4,7 +4,6 @@ describe "Radiator to JSON" do
 
   it "should return a json representation of a radiator" do
 
-
     pipeline1 = Pipeline.new 'pipeline1'
     stage1 = Stage.new '1'
     stage2 = Stage.new '2'

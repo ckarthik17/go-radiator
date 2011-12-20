@@ -16,3 +16,7 @@ get '/' do
   content_type :json
   radiator.to_json
 end
+
+get '/view' do
+
+end

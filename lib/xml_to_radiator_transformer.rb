@@ -46,7 +46,7 @@ class XmlToRadiatorTransformer
 
       if pipeline_name != previous_name
         pipeline = Pipeline.new(pipeline_name)
-        pipeline.stages << Stage.new(stage_name)
+        pipeline.stages << Stage.new(stage_name, row.activity)
         radiator.pipelines << pipeline
 
         previous_name = pipeline_name
@@ -54,7 +54,7 @@ class XmlToRadiatorTransformer
         previous_pipeline = pipeline
       else
         if stage_name != previous_stage_name
-          previous_pipeline.stages << Stage.new(stage_name)
+          previous_pipeline.stages << Stage.new(stage_name, row.activity)
           previous_stage_name = stage_name
         end
       end
