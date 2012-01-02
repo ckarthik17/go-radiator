@@ -1,22 +1,23 @@
 require "rubygems"
 require "bundler/setup"
 
-require 'sinatra'
+require 'sinatra/base'
 require 'json'
+require 'haml'
+require 'nokogiri'
+require 'httpclient'
 
-require_relative 'xml_to_radiator_transformer'
+require_relative 'retriever'
 
-get '/' do
-  file = File.open('sample_data.xml')
-  xml_doc = Nokogiri::XML(file)
-  file.close
+class GoRadiator < Sinatra::Base
 
-  radiator = XmlToRadiatorTransformer.new.transform xml_doc
+  get '/' do
+    content_type :json
+    Retriever.new.get_data.to_json
+  end
 
-  content_type :json
-  radiator.to_json
-end
-
-get '/view' do
-
+  get '/radiator' do
+    @radiator = Retriever.new.get_data
+    haml :radiator
+  end
 end

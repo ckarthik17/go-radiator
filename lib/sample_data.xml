@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Projects>
-  <Project name="Middleware_CI :: BuildAndPackage" activity="Building" lastBuildStatus="Success" lastBuildLabel="361 :: 3" lastBuildTime="2011-12-06T11:45:27" webUrl="http://vl2gos002:8153/go/pipelines/Middleware_CI/361/BuildAndPackage/3" />
+  <Project name="Middleware_CI :: BuildAndPackage" activity="Building" lastBuildStatus="Success" lastBuildLabel="1.1.361 :: 3" lastBuildTime="2011-12-06T11:45:27" webUrl="http://vl2gos002:8153/go/pipelines/Middleware_CI/361/BuildAndPackage/3" />
   <Project name="Middleware_CI :: BuildAndPackage :: BuildAndPackage" activity="Building" lastBuildStatus="Success" lastBuildLabel="361 :: 3" lastBuildTime="2011-12-06T11:45:27" webUrl="http://vl2gos002:8153/go/tab/build/detail/Middleware_CI/361/BuildAndPackage/3/BuildAndPackage" />
   <Project name="Middleware_CI :: Deploy" activity="Sleeping" lastBuildStatus="Success" lastBuildLabel="361 :: 5" lastBuildTime="2011-12-06T12:02:46" webUrl="http://vl2gos002:8153/go/pipelines/Middleware_CI/361/Deploy/5" />
   <Project name="Middleware_CI :: Deploy :: Deploy" activity="Sleeping" lastBuildStatus="Success" lastBuildLabel="361 :: 5" lastBuildTime="2011-12-06T12:02:46" webUrl="http://vl2gos002:8153/go/tab/build/detail/Middleware_CI/361/Deploy/5/Deploy" />

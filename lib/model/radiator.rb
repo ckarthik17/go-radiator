@@ -1,6 +1,8 @@
-require_relative 'JSONable'
+require_relative '../model/JSONable'
 
-class Radiator < JSONable
+class Radiator
+  include JSONable
+
   attr_accessor :pipelines
 
   def initialize
@@ -9,11 +11,14 @@ class Radiator < JSONable
 end
 
 class Pipeline
-  attr_reader :name
+  attr_reader :name, :build_label, :last_build_date, :last_build_time
   attr_accessor :stages
 
-  def initialize name
+  def initialize name, build_label, last_build_date, last_build_time
     @name = name
+    @build_label = build_label
+    @last_build_date = last_build_date
+    @last_build_time = last_build_time
     @stages = []
   end
 
@@ -26,4 +31,5 @@ class Stage
     @name = name
     @status = status
   end
+
 end
