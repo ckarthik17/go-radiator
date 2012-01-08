@@ -1,0 +1,5 @@
+Setup Rubygems
+bundle install
+
+Run web server for development
+bundle exec shotgun config.ru

@@ -33,11 +33,13 @@ describe "Transform Xml to GO Radiator Objects" do
     radiator.pipelines[0].stages[3].name.should == "FunctionalTests_2"
     radiator.pipelines[0].stages[3].status.should == "success"
 
-    radiator.pipelines[1].stages.count.should == 2
+    radiator.pipelines[1].stages.count.should == 3
     radiator.pipelines[1].stages[0].name.should == "Deploy"
     radiator.pipelines[1].stages[0].status.should == "success"
-    radiator.pipelines[1].stages[1].name.should == "Test"
+    radiator.pipelines[1].stages[1].name.should == "FunctionalTest"
     radiator.pipelines[1].stages[1].status.should == "failure"
+    radiator.pipelines[1].stages[2].name.should == "PerformanceTest"
+    radiator.pipelines[1].stages[2].status.should == "failure"
 
     radiator.pipelines[2].stages.count.should == 2
     radiator.pipelines[2].stages[0].name.should == "BuildAndPackage"
