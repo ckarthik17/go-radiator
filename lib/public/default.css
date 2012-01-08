@@ -31,11 +31,17 @@ div#stages {
 }
 div#stages div {
     float: left;
-    padding: 10px 0;
+
     font-family: Verdana;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
+}
+div#stages div div {
+    width: 99.9%;
+    height: 100%;
+    padding: 10px 0;
+    border-right: solid 1px white;
 }
 .success { background-color: green; }
 .building { background-color: yellow; }

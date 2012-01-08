@@ -12,4 +12,8 @@ describe "Get CCTray xml" do
 
     puts response.body
   end
+
+  it "should get individual pipeline" do
+
+  end
 end

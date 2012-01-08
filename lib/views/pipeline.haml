@@ -1,0 +1,16 @@
+%div#pipeline
+  %div#name
+    #{@pipeline.name}
+  %div
+    Build No:
+    %span==#{@pipeline.build_label}
+  %div
+    Build Date:
+    %span==#{@pipeline.last_build_date}
+  %div
+    Build Time:
+    %span==#{@pipeline.last_build_time}
+  %div#stages
+    - @pipeline.stages.each do |stage|
+      %div{:class => "#{stage.status}", :style => "width:#{(100/@pipeline.stages.count)}%"}
+        %div== #{stage.name}

@@ -6,6 +6,13 @@ class Retriever
     get_xml_test
   end
 
+  def get_pipeline_data name
+    get_xml_test.pipelines.each do |pipeline|
+       return pipeline if pipeline.name.downcase == name.downcase
+    end
+    Pipeline.new "Pipeline Not Found", "N/A", "N/A", "N/A"
+  end
+
   private
   def get_xml_test
     puts
@@ -21,6 +28,8 @@ class Retriever
     http_client.set_auth(domain, user, password)
 
     http_client.get(url)
+
+    #TODO: Implement get for CCtray response fully
   end
 
 end

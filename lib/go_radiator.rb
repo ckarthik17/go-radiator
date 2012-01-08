@@ -20,4 +20,9 @@ class GoRadiator < Sinatra::Base
     @radiator = Retriever.new.get_data
     haml :radiator
   end
+
+  get '/pipeline/:name' do
+    @pipeline = Retriever.new.get_data.get_pipeline(params[:name])
+    haml :pipeline
+  end
 end

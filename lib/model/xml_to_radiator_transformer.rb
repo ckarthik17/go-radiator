@@ -8,6 +8,7 @@ class XmlToRadiatorTransformer
     raw_data_to_radiator_transform raw_data_rows
   end
 
+  private
   def extract_raw_data xml
     rows = xml.xpath("//Project")
 
