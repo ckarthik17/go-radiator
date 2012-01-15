@@ -18,11 +18,11 @@ class GoRadiator < Sinatra::Base
 
   get '/radiator' do
     @radiator = Retriever.new.get_data
-    haml :radiator
+    haml :radiator, :format => :html5
   end
 
   get '/pipeline/:name' do
     @pipeline = Retriever.new.get_data.get_pipeline(params[:name])
-    haml :pipeline
+    haml :pipeline, :format => :html5, :layout => false
   end
 end
