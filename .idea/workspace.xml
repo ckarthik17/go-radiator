@@ -44,16 +44,16 @@
       <file leaf-file-name="pipeline.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/views/pipeline.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="85" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+            <state line="15" column="97" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="radiator.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="radiator.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/views/radiator.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="3" selection-start="62" selection-end="62" vertical-scroll-proportion="0.026587889">
+            <state line="6" column="24" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,16 @@
       <file leaf-file-name="default.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/public/default.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="28" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
+            <state line="39" column="8" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="624" selection-end="624" vertical-scroll-proportion="0.35240963">
               <folding />
             </state>
           </provider>
@@ -110,12 +119,12 @@
         <option value="$PROJECT_DIR$/lib/sample_data.xml" />
         <option value="$PROJECT_DIR$/spec/test.xml" />
         <option value="$PROJECT_DIR$/spec/xml_to_radiator_transformer_spec.rb" />
-        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/lib/views/layout.haml" />
-        <option value="$PROJECT_DIR$/lib/public/default.js" />
         <option value="$PROJECT_DIR$/lib/go_radiator.rb" />
         <option value="$PROJECT_DIR$/lib/views/pipeline.haml" />
         <option value="$PROJECT_DIR$/lib/views/radiator.haml" />
+        <option value="$PROJECT_DIR$/lib/public/default.js" />
+        <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
   </component>
@@ -667,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="61" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/radiator_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="24" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.7763975">
@@ -688,20 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/views/layout.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/public/default.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="28" selection-start="866" selection-end="866" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/go_radiator.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="55" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
@@ -711,14 +699,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/views/pipeline.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="85" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+        <state line="15" column="97" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/views/layout.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/views/radiator.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="3" selection-start="62" selection-end="62" vertical-scroll-proportion="0.026587889">
+        <state line="6" column="24" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/public/default.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="8" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="624" selection-end="624" vertical-scroll-proportion="0.35240963">
           <folding />
         </state>
       </provider>

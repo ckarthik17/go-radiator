@@ -15,5 +15,5 @@
     %span==#{Time.now.strftime("%T")}
 %div#stages
   - @pipeline.stages.each do |stage|
-    %div{:class => "#{stage.status}", :style => "width:#{(100/@pipeline.stages.count)}%"}
+    %div{:class => "#{stage.status}", :style => "width:#{(100.000/@pipeline.stages.count).round(3)}%"}
       %div== #{stage.name}

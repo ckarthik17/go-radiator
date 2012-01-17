@@ -3,3 +3,21 @@ bundle install
 
 Run web server for development
 bundle exec shotgun config.ru
+
+
+-------------------
+
+GO Radiator is simple program inspired by the origin written by Roy Morgan (in .Net), which was a windows app to read the CCTray
+out put form GO which works brilliantly but! and there is a but it's design gives some short coming firstly because it's a windows
+app every monitor that we want to display a GO Radiator on has to have computer and GO login account associated with it.
+The way you add pipelines to display isn't brilliant and can get difficult to manage so I started the new Ruby / Sinatra / Haml
+version to solve some of these problem and move the idea forward.
+
+In summary the new architecture is very simple there's a Sinatra web service that can return JSON or a HTML view of the pipelines.
+The login code is separate and I'm thinking of making that a separate project or even Gem. Now this is about as fare as I've got at the moment.
+The next feature that need to be implemented are:
+- Error handling on Ajax requests
+- Build breaker name
+- Profile creation (e.g. profile a has pipelines a, c and f to display)
+- GO Error display
+- ....
