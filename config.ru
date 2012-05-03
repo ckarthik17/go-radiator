@@ -1,3 +1,7 @@
-require './lib/go_radiator'
+path = File.expand_path("../", __FILE__)
 
-run GoRadiator.new
+require 'rubygems'
+require 'sinatra'
+require "#{path}/app"
+
+run Sinatra::Application

@@ -6,6 +6,8 @@ require "json"
 require "nokogiri"
 require "haml"
 
-require_relative '../../lib/model/xml_to_radiator_transformer'
-require_relative '../../lib/model/radiator'
-require_relative '../../lib/retriever'
+require_relative '../../model/xml_to_radiator_transformer'
+require_relative '../../model/stage'
+require_relative '../../model/pipeline'
+require_relative '../../model/radiator'
+require_relative '../../model/retriever'

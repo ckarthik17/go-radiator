@@ -1,9 +1,9 @@
 source :rubygems
 
-gem 'rspec', '2.7.0'
-gem 'httpclient', '2.2.3'
-gem 'nokogiri', '1.5.0'
-gem 'sinatra', '1.3.1'
-gem 'json', '1.6.1'
-gem 'haml'
-gem 'shotgun', '0.9'
+gem "sinatra"
+gem "haml"
+gem "shotgun"
+gem "json"
+gem "nokogiri"
+gem "rspec"
+gem "httpclient"
