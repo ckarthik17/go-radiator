@@ -1,24 +1,5 @@
 .container
-  %div#pipeline{:class => "well"}
-    %h2#name
-      #{@pipeline.name}
-    %h3
-      #{@pipeline.current_stage.first.name} - Stage #{@pipeline.current_stage_index} / #{@pipeline.stages.count+1}
-    %div{:class => "progress #{progress_css}"}
-      %div{:class => "bar", :style => "width:#{@pipeline.percentage_complete}%"}
-    %div
-      Build No:
-      %span==#{@pipeline.build_label}
-    %div
-      Build Date/Time:
-      %span==#{@pipeline.last_build_date_time}
-    %div
-      Last Refresh:
-      %span==#{Time.now.strftime("%T")}
-
-  %div==current stage: #{@pipeline.current_stage.first.name} - #{@pipeline.current_stage.first.status}
-
-  -#%div#stages
-  -#  - @pipeline.stages.each do |stage|
-  -#    %div{:class => "#{stage.status}", :style => "width:#{(100.000/@pipeline.stages.count).round(3)}%"}
-  -#      %div== #{stage.name} - #{stage.status}
+  - rows.each do |row|
+    %div{:class => "row"}
+      -row.each do |pipeline|
+        =haml(:pipeline, :locals => {:pipeline => pipeline}, :format => :html5)

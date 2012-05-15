@@ -1,22 +1,26 @@
+require 'configatron'
 require_relative 'xml_to_radiator_transformer'
 
 class Retriever
 
   def get_data
-    get_xml_test
+    if configatron.test_mode
+      get_xml_test configatron.test.file.name
+    else
+      get_cctray_response configatron.url, configatron.domain, configatron.user, configatron.password
+    end
   end
 
   def get_pipeline_data name
     get_xml_test.pipelines.each do |pipeline|
        return pipeline if pipeline.name.downcase == name.downcase
     end
-    Pipeline.new "Pipeline Not Found", "N/A", "N/A", "N/A"
+    Pipeline.new "Pipeline Not Found", "N/A", "N/A"
   end
 
   private
-  def get_xml_test
-    puts File.dirname(__FILE__) + '/sample_data.xml'
-    file = File.open(File.dirname(__FILE__) + '/sample_data.xml')
+  def get_xml_test file_name
+    file = File.open(File.dirname(__FILE__) + '/' + file_name.to_s)
     xml_doc = Nokogiri::XML(file)
     file.close
 

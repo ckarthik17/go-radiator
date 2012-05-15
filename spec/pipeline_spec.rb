@@ -99,6 +99,7 @@ describe "Pipeline" do
       pipeline.set_current_stage
 
       pipeline.percentage_complete.should == 33.33
+      pipeline.progress_css.should == 'progress-warning progress-striped active'
     end
 
     it "should return the correct percentage complete on failure at stage 1" do
@@ -112,6 +113,7 @@ describe "Pipeline" do
       pipeline.set_current_stage
 
       pipeline.percentage_complete.should == 33.33
+      pipeline.progress_css == 'progress-danger'
     end
 
     it "should return the correct percentage complete on failure at stage 2" do
@@ -125,6 +127,23 @@ describe "Pipeline" do
       pipeline.set_current_stage
 
       pipeline.percentage_complete.should == 66.67
+      pipeline.progress_css == 'progress-danger'
+    end
+
+    it "should return the correct percentage complete for even number" do
+      pipeline = Pipeline.new 'pipeline', '2', '2011-11-11T11:00:00'
+      stage1 = Stage.new '1', "success", ""
+      stage2 = Stage.new '2', "failure", ""
+      stage3 = Stage.new '3', "success", ""
+      stage4 = Stage.new '4', "success", ""
+      pipeline.stages << stage1
+      pipeline.stages << stage2
+      pipeline.stages << stage3
+      pipeline.stages << stage4
+      pipeline.set_current_stage
+
+      pipeline.percentage_complete.should == 50
+      pipeline.progress_css == 'progress-danger'
     end
 
     it "should return the correct percentage complete on all successful" do
@@ -138,6 +157,7 @@ describe "Pipeline" do
       pipeline.set_current_stage
 
       pipeline.percentage_complete.should == 100
+      pipeline.progress_css == 'progress-success'
     end
 
   end

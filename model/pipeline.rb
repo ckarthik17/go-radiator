@@ -1,5 +1,5 @@
 class Pipeline
-  attr_reader :name, :build_label, :last_build_date_time, :current_stage, :percentage_complete, :current_stage_index
+  attr_reader :name, :build_label, :last_build_date_time, :current_stage, :percentage_complete, :current_stage_index, :progress_css
   attr_accessor :stages
 
   def initialize name, build_label, last_build_date_time
@@ -23,9 +23,12 @@ class Pipeline
         @current_stage = []
         @current_stage << stage
         set_percentage_complete stage
+        set_progress_css
         return
       end
     end
+
+    set_progress_css
   end
 
   def set_percentage_complete stage
@@ -34,6 +37,14 @@ class Pipeline
     @percentage_complete = (100.0*(index/@stages.count)).round(2)
   end
 
+  def set_progress_css
+    progress_css = ''
+    progress_css = 'progress-warning progress-striped active' if @current_stage.first.status == 'building'
+    progress_css = 'progress-success' if @current_stage.first.status == 'success'
+    progress_css = 'progress-danger' if @current_stage.first.status == 'failure'
+
+    @progress_css = progress_css
+  end
 end
 
 

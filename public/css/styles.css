@@ -2,5 +2,11 @@ body {
 	padding-top: 60px;
 	padding-bottom: 40px;
 }
-
+div#pipeline {
+    margin-bottom: 20px;
+    border-bottom: double 1px solid;
+}
+div#pipeline div.bottom { }
+h2 { overflow:hidden; }
 div.footer p { text-align: center; }
+p.admin { text-align: center; }

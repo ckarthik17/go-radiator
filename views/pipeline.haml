@@ -1,0 +1,18 @@
+- if !pipeline.nil?
+  %div#pipeline{:class => "span4"}
+    %h2#name
+      #{pipeline.name}
+    %h3
+      #{pipeline.current_stage.first.name} - Stage #{pipeline.current_stage_index} / #{pipeline.stages.count}
+    %div{:class => "progress #{pipeline.progress_css}"}
+      %div{:class => "bar", :style => "width:#{pipeline.percentage_complete}%"}
+    %div
+      Build No:
+      %span==#{pipeline.build_label}
+    %div
+      Build DateTime:
+      %span==#{pipeline.last_build_date_time}
+    %div{:class => "bottom"}
+      Last Refresh:
+      %span==#{Time.now.strftime("%T")}
+    %hr
