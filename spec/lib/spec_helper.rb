@@ -11,3 +11,6 @@ require_relative '../../model/stage'
 require_relative '../../model/pipeline'
 require_relative '../../model/radiator'
 require_relative '../../model/retriever'
+require_relative '../../model/profiles'
+require_relative '../../model/profiles_repository'
+

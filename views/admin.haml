@@ -1,3 +1,33 @@
-%div
-  %p{:class => "admin"}
-    Admin site coming soon!
+- content_for :script_add_ons do
+  %script{ :type => "text/javascript", :src => "js/admin.js"}
+
+.container
+  %div{:class => "row profile"}
+    %h2 Current Profiles
+    %table{:class => "table table-bordered"}
+      %thead
+        %tr
+          %th Name
+          %th Pipelines
+          %th Delete
+      - profiles.each do |profile|
+        %tr
+          %td #{profile.name}
+          %td{:class => "pipelines-wrap"} #{profile.pipelines}
+          %td
+            %a{:href => "#{profile.name}", :class => "delete"} delete
+
+  %div{:class => "row profile-create"}
+    %h2 Create Profile
+    %div{:class => "profile-name"}
+      %label{:for => "profile_name"} Profile Name:
+      %input{:type => "text", :name => "profile_name", :id => "profileName"}
+      %input{:type => "submit", :value => "save", :id => "save"}
+    %div{:class => "profile-pipelines"}
+      %h3 You've selected:
+      %p{:id => "select-result"} none
+      %span please select the pipelines you want to add to the profile (use control to select more than one)
+    %ol{:id => "selectable"}
+      - pipeline_names.each do |name|
+        %li{:class => "ui-state-default"} #{name}
+

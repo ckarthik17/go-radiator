@@ -1,0 +1,8 @@
+{
+  "profiles": [
+    {
+      "name": "thomas",
+      "pipelines": "test"
+    }
+  ]
+}

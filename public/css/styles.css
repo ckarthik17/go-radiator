@@ -8,5 +8,43 @@ div#pipeline {
 }
 div#pipeline div.bottom { }
 h2 { overflow:hidden; }
-div.footer p { text-align: center; }
-p.admin { text-align: center; }
+div.footer p { text-align: center; clear: both; }
+
+
+/*Admin Page*/
+#feedback { font-size: 1.4em; }
+#selectable .ui-selecting { background: #FECA40; }
+#selectable .ui-selected { background: #F39814; color: white; }
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 100%; float:left; margin-left: 7px; }
+#selectable li { margin: 3px; padding-top: 30px; float: left; width: 24%; height: 40px; font-size: 1em; text-align: center; }
+
+.profile, .profile-create {
+    border: solid 1px #d3d3d3;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    padding: 10px;
+}
+
+.profile-create {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-name { width: 100%; margin: 5px; }
+.profile-name label { float: left; margin-right: 10px; }
+.profile-name input { float: left; }
+.profile-name input[type="submit"] { margin-left: 10px;}
+.profile-pipelines { clear:both; margin: 5px; }
+.profile-pipelines span { }
+#select-result {
+    word-wrap:break-word;
+    border: solid 1px #d3d3d3;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    padding: 10px;
+}
+.pipelines-wrap {word-break: break-all;}
+
+.profile-select { width: 20%; margin:auto; }

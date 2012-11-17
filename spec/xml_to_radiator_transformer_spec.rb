@@ -3,7 +3,7 @@ require_relative 'lib/spec_helper'
 describe "Transform Xml to GO Radiator Objects" do
 
   it "should pull out all pipelines" do
-    file = File.open(Dir.pwd + '/test.xml')
+    file = File.open(Dir.pwd + '/spec/test.xml')
     xml_doc = Nokogiri::XML(file)
     file.close
 

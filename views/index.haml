@@ -1,5 +1,9 @@
+- content_for :script_add_ons do
+  %script{ :type => "text/javascript", :src => "js/reload.js"}
+
 .container
   - rows.each do |row|
     %div{:class => "row"}
       -row.each do |pipeline|
         =haml(:pipeline, :locals => {:pipeline => pipeline}, :format => :html5)
+

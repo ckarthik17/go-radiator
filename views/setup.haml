@@ -1,0 +1,11 @@
+- content_for :script_add_ons do
+  %script{ :type => "text/javascript", :src => "js/setup.js"}
+
+.container
+  %fieldset{:class => "profile-select"}
+    %legend Profile
+    %select
+      %option select a profile
+      - profiles.each do |profile|
+        %option #{profile.name}
+  %hr

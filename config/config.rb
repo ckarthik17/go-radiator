@@ -1,4 +1,4 @@
-require 'configatron'
+#require 'configatron'
 
 configatron.domain = ""
 configatron.user = ""
