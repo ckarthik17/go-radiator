@@ -22,7 +22,7 @@ get '/?' do
   content_type :json
   status 200
 
-  Retriever.new.get_data("no-profile").to_json
+  Retriever.new.get_data.to_json
 end
 
 get '/profiles/?' do
@@ -51,7 +51,7 @@ end
 
 # UI Methods
 get '/admin/?' do
-  radiator = Retriever.new.get_data("no-profile")
+  radiator = Retriever.new.get_data
   pipeline_names = []
   radiator.pipelines.each do |p|
     pipeline_names << p.name

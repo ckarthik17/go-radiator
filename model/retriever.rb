@@ -2,7 +2,7 @@ require_relative 'xml_to_radiator_transformer'
 
 class Retriever
 
-  def get_data(profile)
+  def get_data(profile = "no-profile")
     if true
       radiator = get_xml_test("sample_data.xml")
     else
