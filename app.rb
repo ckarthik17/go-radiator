@@ -2,6 +2,8 @@ require "rubygems"
 require "bundler/setup"
 
 require "sinatra"
+set :protection, except: :ip_spoofing
+
 require "sinatra/content_for"
 require "haml"
 require "json"

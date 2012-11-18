@@ -2,3 +2,5 @@
 .idea/*.xml
 .idea/*.iml
 live_data.xml
+package/.
+package/.DS_Store
