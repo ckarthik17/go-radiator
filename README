@@ -1,3 +1,5 @@
+Demo of the app can befound here http://goradiator.eu01.aws.af.cm/radiator
+
 Sinatra, Haml and Bootstrap kick ass so I wanted to make a bare bones project to
 start from which would get the setup hassle out of the way. 
 
@@ -18,7 +20,6 @@ Setup:
     - Shotgun
     - Rack
     - Haml
-    - Vlad the Deployer
 
   To get up and running all that should be needed is to install the Ruby gem
 Bundler if up don't already have it installed then run:

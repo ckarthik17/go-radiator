@@ -1,20 +1,8 @@
 {
   "profiles": [
     {
-      "name": "colin",
-      "pipelines": "BackOffice_DeployToPreLive;"
-    },
-    {
-      "name": "jane",
-      "pipelines": "ASU_CI_BuildAndPackage;BackOffice_DeployToPreLive;CarInsurance_AbInitioRegression_PRE;CarInsurance_AbInitioRegression_PerfTest;"
-    },
-    {
-      "name": "marget",
-      "pipelines": "ASU_CI_BuildAndPackage;CarInsurance_AbInitioRegression_PRE;"
-    },
-    {
-      "name": "large",
-      "pipelines": "ASU_CI_BuildAndPackage;BackOffice_DeployToPreLive;BackOffice_DeployToWythenshawe;CRMService_CI;CarInsurance_AbInitioRegression_PRE;CarInsurance_AbInitioRegression_PerfTest;CarInsurance_AbInitioRegression_Test;CarInsurance_CI;CarInsurance_Deploy_CI_Test;CarInsurance_Deploy_Perf;CarInsurance_Deploy_Provider_Test;CarInsurance_WebRegression_RHPre;CarInsurance_WebRegression_RHTest;Cards_BackOffice_Deploy_Live;Cards_BackOffice_Deploy_Pre;Cards_CI;"
+      "name": "Test_Profile_1",
+      "pipelines": "Middleware_CI;Middleware_Deploy;Service1_CI;"
     }
   ]
 }

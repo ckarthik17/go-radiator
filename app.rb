@@ -17,34 +17,6 @@ before do
   @profiles_repository = ProfilesRepository.new(File.dirname(__FILE__) + '/db/profiles.json')
 end
 
-get '/admin/?' do
-  radiator = Retriever.new.get_data
-  pipeline_names = []
-  radiator.pipelines.each do |p|
-    pipeline_names << p.name
-  end
-  pipeline_names = pipeline_names.sort
-  profiles = @profiles_repository.get_all.profiles
-
-  haml :admin, :locals => {:pipeline_names => pipeline_names, :profiles => profiles}, :format => :html5
-end
-
-get '/radiator/?' do
-  profiles = @profiles_repository.get_all.profiles
-
-  haml :setup, :locals => {:profiles => profiles}, :format => :html5
-end
-
-get '/radiator/:profile/?' do
-  radiator = Retriever.new.get_data(@profiles_repository.get(params[:profile]).pipelines)
-  rows = []
-  radiator.pipelines.each_slice(3) do |x,y,z|
-    rows << [x,y,z]
-  end
-
-  haml :index, :locals => {:rows => rows}, :format => :html5
-end
-
 # API METHODS - Supporting Application/json
 get '/?' do
   content_type :json
@@ -76,3 +48,33 @@ delete '/profile/:name/?' do
 
   @profiles_repository.delete(params[:name])
 end
+
+# UI Methods
+get '/admin/?' do
+  radiator = Retriever.new.get_data("no-profile")
+  pipeline_names = []
+  radiator.pipelines.each do |p|
+    pipeline_names << p.name
+  end
+  pipeline_names = pipeline_names.sort
+  profiles = @profiles_repository.get_all.profiles
+
+  haml :admin, :locals => {:pipeline_names => pipeline_names, :profiles => profiles}, :format => :html5
+end
+
+get '/radiator/?' do
+  profiles = @profiles_repository.get_all.profiles
+
+  haml :setup, :locals => {:profiles => profiles}, :format => :html5
+end
+
+get '/radiator/:profile/?' do
+  radiator = Retriever.new.get_data(@profiles_repository.get(params[:profile]).pipelines)
+  rows = []
+  radiator.pipelines.each_slice(3) do |x,y,z|
+    rows << [x,y,z]
+  end
+
+  haml :index, :locals => {:rows => rows}, :format => :html5
+end
+
