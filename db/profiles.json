@@ -1,8 +1,8 @@
 {
   "profiles": [
     {
-      "name": "Test_Profile_1",
-      "pipelines": "Middleware_CI;Middleware_Deploy;Service1_CI;"
+      "name": "test 1",
+      "pipelines": "ASU_CI_BuildAndPackage;BackOffice_DeployToPreLive;BackOffice_DeployToWythenshawe;CRMService_CI;CarInsurance_AbInitioRegression_PerfTest;CarInsurance_AbInitioRegression_Test;CarInsurance_CI;"
     }
   ]
 }

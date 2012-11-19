@@ -13,6 +13,7 @@ require "configatron"
 
 require_relative "model/retriever"
 require_relative "model/profiles_repository"
+require_relative "config/config"
 
 before do
   @profiles_repository = ProfilesRepository.new(File.dirname(__FILE__) + '/db/profiles.json')

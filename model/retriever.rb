@@ -4,9 +4,9 @@ class Retriever
 
   def get_data(profile = "no-profile")
     if configatron.test.mode
-      radiator = get_xml_test(configatron.test.file.name)
+      radiator = get_xml_test(configatron.test_file_name)
     elsif configatron.demo.mode
-      radiator = get_xml_test(configatron.demo.file.name)
+      radiator = get_xml_test(configatron.demo_file_name)
     else
       radiator = get_cctray_response configatron.url, configatron.domain, configatron.user, configatron.password
     end
