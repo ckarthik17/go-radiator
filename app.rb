@@ -9,6 +9,7 @@ require "haml"
 require "json"
 require "nokogiri"
 require "httpclient"
+require "configatron"
 
 require_relative "model/retriever"
 require_relative "model/profiles_repository"

@@ -3,8 +3,10 @@ require_relative 'xml_to_radiator_transformer'
 class Retriever
 
   def get_data(profile = "no-profile")
-    if true
-      radiator = get_xml_test("sample_data.xml")
+    if configatron.test.mode
+      radiator = get_xml_test(configatron.test.file.name)
+    elsif configatron.demo.mode
+      radiator = get_xml_test(configatron.demo.file.name)
     else
       radiator = get_cctray_response configatron.url, configatron.domain, configatron.user, configatron.password
     end
@@ -20,10 +22,8 @@ class Retriever
 
   private
   def get_xml_test file_name
-    #file = File.open(File.dirname(__FILE__) + '/' + file_name.to_s)
     file = IO.read(File.dirname(__FILE__) + '/' + file_name.to_s)
     xml_doc = Nokogiri::XML(file)
-    #file.close
 
     XmlToRadiatorTransformer.new.transform xml_doc
   end
