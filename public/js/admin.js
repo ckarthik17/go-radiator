@@ -1,5 +1,5 @@
 var admin = typeof admin === 'undefined' ? {} : admin;
-
+var prefix = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
 $(function () {
     $(function () {
         $("#selectable").selectable({
@@ -40,14 +40,14 @@ function saveProfile() {
     var pipelines_result = validatePipelines(pipelines);
 
     if(name_result && pipelines_result) {
-        $.post("http://localhost:9393/profile", "{ \"name\": \""+ name +"\", \"pipelines\": \""+ pipelines +"\" }");
+        $.post(prefix +"/profile", "{ \"name\": \""+ name +"\", \"pipelines\": \""+ pipelines +"\" }");
         refreshPage();
     }
 }
 
 function deleteProfile(profileName) {
     $.ajax({
-        url: "http://localhost:9393/profile/" + profileName,
+        url: prefix + "/profile/" + profileName,
         type: 'DELETE'
     });
     refreshPage();
