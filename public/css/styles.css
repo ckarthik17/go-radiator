@@ -9,8 +9,38 @@ div#pipeline {
 div#pipeline div.bottom { }
 h2 { overflow:hidden; }
 div.footer p { text-align: center; clear: both; }
+.progress-success .bar {
+    background-color: #0E5008;
+    background-image: -moz-linear-gradient(top, #14670D, #0E5008);
+    background-image: -ms-linear-gradient(top, #14670D, #0E5008);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#14670D), to(#0E5008));
+    background-image: -webkit-linear-gradient(top, #14670D, #0E5008);
+    background-image: -o-linear-gradient(top, #14670D, #0E5008);
+    background-image: linear-gradient(top, #14670D, #0E5008);
+}
 
+.progress-danger .bar {
+    background-color: #A00F0F;
+    background-image: -moz-linear-gradient(top, #B22424, #901313);
+    background-image: -ms-linear-gradient(top, #B22424, #901313);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#B22424), to(#901313));
+    background-image: -webkit-linear-gradient(top, #B22424, #901313);
+    background-image: -o-linear-gradient(top, #B22424, #901313);
+    background-image: linear-gradient(top, #B22424, #901313);
+}
 
+.progress-warning .bar {
+    background-color: #C1560E;
+    background-image: -moz-linear-gradient(top, #C7611D, #B15111);
+    background-image: -ms-linear-gradient(top, #C7611D, #B15111);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#C7611D), to(#B15111));
+    background-image: -webkit-linear-gradient(top, #C7611D, #B15111);
+    background-image: -o-linear-gradient(top, #C7611D, #B15111);
+    background-image: linear-gradient(top, #C7611D, #B15111);
+}
+.progress-warning.progress-striped .bar {
+    background-color: #C7611D;
+}
 /*Admin Page*/
 #feedback { font-size: 1.4em; }
 #selectable .ui-selecting { background: #FECA40; }
