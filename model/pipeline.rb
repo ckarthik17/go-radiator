@@ -43,7 +43,7 @@ class Pipeline
     progress_css = 'progress-success' if @current_stage.first.status == 'success'
     progress_css = 'progress-danger' if @current_stage.first.status == 'failure'
 
-    @progress_css = progress_css
+    @progress_css = progress_css + ' progress-common'
   end
 end
 

@@ -9,6 +9,9 @@ div#pipeline {
 div#pipeline div.bottom { }
 h2 { overflow:hidden; }
 div.footer p { text-align: center; clear: both; }
+.progress-common {
+    height: 50px;
+}
 .progress-success .bar {
     background-color: #009900;
     background-image: -moz-linear-gradient(top, #009900, #009900);
