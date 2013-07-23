@@ -9,10 +9,16 @@ div#pipeline {
 div#pipeline div.bottom { }
 h2 { overflow:hidden; }
 div.footer p { text-align: center; clear: both; }
+
+.pipline-name {
+    border:1px solid black;
+}
+
 .progress-common {
     height: 50px;
 }
-.progress-success .bar {
+
+.progress-success .bar {    
     background-color: #009900;
     background-image: -moz-linear-gradient(top, #009900, #009900);
     background-image: -ms-linear-gradient(top, #009900, #009900);
