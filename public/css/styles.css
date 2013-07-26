@@ -39,16 +39,16 @@ div.footer p { text-align: center; clear: both; }
 }
 
 .progress-warning .bar {
-    background-color: #FF6600;
-    background-image: -moz-linear-gradient(top, #FF6600, #FF6600);
-    background-image: -ms-linear-gradient(top, #FF6600, #FF6600);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF6600), to(#FF6600));
-    background-image: -webkit-linear-gradient(top, #FF6600, #FF6600);
-    background-image: -o-linear-gradient(top, #FF6600, #FF6600);
-    background-image: linear-gradient(top, #FF6600, #FF6600);
+    background-color: #ffc613;
+    background-image: -moz-linear-gradient(top, #ffc613, #ffc613);
+    background-image: -ms-linear-gradient(top, #ffc613, #ffc613);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffc613), to(#ffc613));
+    background-image: -webkit-linear-gradient(top, #ffc613, #ffc613);
+    background-image: -o-linear-gradient(top, #ffc613, #ffc613);
+    background-image: linear-gradient(top, #ffc613, #ffc613);
 }
 .progress-warning.progress-striped .bar {
-    background-color: #FF6600;
+    background-color: #ffc613;
 }
 /*Admin Page*/
 #feedback { font-size: 1.4em; }
