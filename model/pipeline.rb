@@ -1,5 +1,5 @@
 class Pipeline
-  attr_reader :name, :build_label, :last_build_date_time, :current_stage, :percentage_complete, :current_stage_index, :progress_css
+  attr_reader :name, :build_label, :last_build_date_time, :current_stage, :percentage_complete, :current_stage_index, :progress_css, :glow_color
   attr_accessor :stages
 
   def initialize name, build_label, last_build_date_time
@@ -39,11 +39,15 @@ class Pipeline
 
   def set_progress_css
     progress_css = ''
+    glow_color = ''
+    
     progress_css = 'progress-warning progress-striped active' if @current_stage.first.status == 'building'
     progress_css = 'progress-success' if @current_stage.first.status == 'success'
-    progress_css = 'progress-danger' if @current_stage.first.status == 'failure'
+    progress_css = 'progress-failure' if @current_stage.first.status == 'failure'
+    glow_color = 'red glow' if @current_stage.first.status == 'failure'
 
     @progress_css = progress_css
+    @glow_color = glow_color
   end
 end
 

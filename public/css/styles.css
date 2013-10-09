@@ -28,7 +28,19 @@ div.footer p { text-align: center; clear: both; }
     background-image: linear-gradient(top, #009900, #009900);
 }
 
-.progress-danger .bar {
+@-webkit-keyframes redPulse {
+  from { border-color: #bc330d; -webkit-box-shadow: 0 0 0px #333; }
+  50% { border-color: #e33100; -webkit-box-shadow: 0 0 60px #e33100; }
+  to { border-color: #bc330d; -webkit-box-shadow: 0 0 0px #333; }
+}
+
+.red.glow {
+  -webkit-animation-name: redPulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.progress-failure .bar {
     background-color: #FF0000;
     background-image: -moz-linear-gradient(top, #FF0000, #FF0000);
     background-image: -ms-linear-gradient(top, #FF0000, #FF0000);
