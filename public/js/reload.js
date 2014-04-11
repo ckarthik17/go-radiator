@@ -1,7 +1,7 @@
-$(document).ready(
-    timedRefresh(20000)
-);
+// $(document).ready(
+//     timedRefresh(5000)
+// );
 
-function timedRefresh(timeoutPeriod) {
-    setTimeout("location.reload(true);",timeoutPeriod);
-}
+// function timedRefresh(timeoutPeriod) {
+//     setTimeout("location.reload(true);",timeoutPeriod);
+// }

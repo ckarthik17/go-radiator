@@ -6,4 +6,6 @@
     %div{:class => "row"}
       -row.each do |pipeline|
         =haml(:pipeline, :locals => {:pipeline => pipeline}, :format => :html5)
-
+.container
+  %div{:class => "row"}
+    =haml(:success_pipeline, :locals => {:rows => success_rows}, :format => :html5)

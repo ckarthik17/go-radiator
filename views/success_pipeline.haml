@@ -1,0 +1,8 @@
+%div#pipeline{:class => "span12", :style => ""}
+  %table{:style => "border: 1px solid black; width: 100%; background-color: green;"}
+    - rows.each do |row|
+      %tr{:style => "border: 1px solid black;"}
+        -row.each do |pipeline|
+          %td{:style => "border: 1px solid black;"}
+            %h3 #{pipeline.name[0, 30]}
+  }

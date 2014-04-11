@@ -44,7 +44,7 @@ class Pipeline
     progress_css = 'progress-warning progress-striped active' if @current_stage.first.status == 'building'
     progress_css = 'progress-success' if @current_stage.first.status == 'success'
     progress_css = 'progress-failure' if @current_stage.first.status == 'failure'
-    glow_color = 'red glow' if @current_stage.first.status == 'failure'
+    glow_color = 'red' if @current_stage.first.status == 'failure'
 
     @progress_css = progress_css
     @glow_color = glow_color
