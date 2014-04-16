@@ -1,7 +1,7 @@
 %div#pipeline{:class => "span12", :style => ""}
-  %table{:style => "border: 1px solid black; width: 100%; background-color: green;"}
+  %table{:style => "width: 100%; border-collapse: separate; border-spacing: 7px;"}
     - rows.each do |row|
-      %tr{:style => "border: 1px solid black;"}
+      %tr{:style => "border: 1px solid black; padding:15px;"}
         -row.each do |pipeline|
-          %td{:style => "border: 1px solid black;"}
+          %td{:style => "border: 1px solid black; background-color: green;"}
             %h3{:style => "color: antiquewhite;"} #{pipeline.name[0, 30]}
