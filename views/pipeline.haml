@@ -1,5 +1,5 @@
 - if !pipeline.nil?
   %div#pipeline{:class => "span4"}
-    %h3{:class => "pipline-name #{pipeline.glow_color}"} #{pipeline.name}
+    %h2{:class => "pipline-name #{pipeline.glow_color}"} #{pipeline.name}
     %div{:class => "progress progress-common #{pipeline.progress_css} #{pipeline.glow_color}"}
       %div{:class => "bar", :style => "height:50px;width:100%"}

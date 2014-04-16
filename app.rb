@@ -87,16 +87,19 @@ get '/all/?' do
   pipelines = radiator.pipelines.select { |hash| 
     hash.current_stage[0].status != 'success'
   }
+  pipelines.sort_by! {|p| p.name}
   pipelines.each_slice(3) do |x|
     rows << x
   end
-  
+
   success_pipelines = radiator.pipelines.select { |hash| 
     hash.current_stage[0].status == 'success'
   }
+  success_pipelines.sort_by! {|p| p.name}
   success_pipelines.each_slice(4) do |x|
     success_rows << x
   end
+
   haml :index, :locals => {:rows => rows, :success_rows => success_rows}, :format => :html5
 end
 
